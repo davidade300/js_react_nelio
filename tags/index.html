@@ -1,58 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
+  <!--
+NOTAS:
+- display block é quando um elemento ocupa toda a largura e um novo elemento vai pra linha de baixo
+-->
 
-<body>
-    <h1>Loja Top</h1>
-    <ul>
-        <li> <a href="#">Categorias</a></li>
-        <li> <a href="#">Títulos</a></li>
-        <li> <a href="#">Sobre nós</a></li>
-    </ul>
+  <body>
+    <header>
+      <nav>
+        <h1>Loja Top</h1>
+        <ul>
+          <li><a href="#categories">Categorias</a></li>
+          <li><a href="#titles">Títulos</a></li>
+          <li><a href="#about">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <h2>Categorias</h2>
-    <ul>
-        <li>Fantasia</li>
-        <li>Educação</li>
-    </ul>
+    <main>
+      <section id="categories">
+        <!-- esse id faz com que ao clicar no link de categorias a pagina pule para cá-->
+        <h2>Categorias</h2>
 
-    <h2>Títulos</h2>
+        <ul>
+          <li>Fantasia</li>
+          <li>Educação</li>
+        </ul>
+      </section>
 
-    <img src="img/book1.jpg" alt="O senhor dos aneis">
-    <h3>O senhor dos anéis</h3>
-    <p>Navegue por essa grande aventura</p>
-    <p>R$ 389.99</p>
+      <section id="titles">
+        <h2>Títulos</h2>
 
-    <img src="img/book2.jpg" alt="Ruby on Rails for Dummies">
-    <h3>Ruby on Rails for Dummies</h3>
-    <p>Aprenda esta fantastica ferramenta</p>
-    <p>R$ 250.49</p>
+        <div>
+          <img src="img/book1.jpg" alt="O senhor dos aneis" />
+          <div>
+            <h3>O senhor dos anéis</h3>
+            <p>Navegue por essa grande aventura</p>
+            <p><span>R$</span> 389.99</p>
+          </div>
+        </div>
 
-    <h2>Sore nós</h2>
-    <h3>O que fazemos</h3>
-    <p>AJudamos pessoas a se tornarem desenvolvedores profissionais</p>
-    <h3>Saiba mais</h3>
+        <div>
+          <img src="img/book2.jpg" alt="Ruby on Rails for Dummies" />
+          <div>
+            <h3>Ruby on Rails for Dummies</h3>
+            <p>Aprenda esta fantastica ferramenta</p>
+            <p><span>R$</span> 250.49</p>
+          </div>
+        </div>
+      </section>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/6PBJUxIiRBI?si=YTk_OfyF6wma0Jz6"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
+      <section id="about">
+        <h2>Sobre nós</h2>
+        <h3>O que fazemos</h3>
+        <p>AJudamos pessoas a se tornarem desenvolvedores profissionais</p>
+        <h3>Saiba mais</h3>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/6PBJUxIiRBI?si=YTk_OfyF6wma0Jz6"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
 
-    <h2>Siga-nos</h2>
-    <a href="https://youtube.com/devsuperior">Youtube</a>
-    <a href="https://instagram.com/devsuperior.ig">Instagram</a>
-
-    <h2>Entre em contato</h2>
-    <address>
-        Escreva para nosso <a href="mailto:contato@devsuperior.com">e-mail</a>. <br>Até a próxima
-    </address>
-
-</body>
-
+    <footer>
+      <div>
+        <div>
+          <h2>Siga-nos</h2>
+          <a href="https://youtube.com/devsuperior">Youtube</a>
+          <a href="https://instagram.com/devsuperior.ig">Instagram</a>
+        </div>
+        <div>
+          <h2>Entre em contato</h2>
+          <address>
+            Escreva para nosso
+            <a href="mailto:contato@devsuperior.com">e-mail</a>. <br />Até a
+            próxima
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
