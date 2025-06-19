@@ -1,0 +1,41 @@
+* { /*muito usado para definir propriedades globais*/
+    font-size:large ; 
+}
+
+body {
+    margin: 0 auto;
+}
+.cor-laranja /*seletor de classe*/ {
+    color: orange;
+}
+
+.cor-laranja:hover {
+    color: rgb(212, 164, 75);
+}
+
+h1,h2 {
+    color: blue;
+}
+
+h1:hover{
+    color:aqua;
+}
+
+p {
+    color: green;
+}
+
+/*seletor de id*/
+/* #titles {  
+background-color: aliceblue;
+} */
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+    /*margin: 10px 40px 20px 30px; *//*cima direita baixo esquerda (sentido horario)*/
+    margin-bottom: 20px;
+    /* padding é um espaçamento entre a borda e o conteudo */
+    padding: 10px;
+}
