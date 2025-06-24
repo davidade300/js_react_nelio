@@ -76,3 +76,7 @@ a:hover {
   width: 200px;
   margin-bottom: 10px;
 }
+
+:root {
+  --main-color: green;
+}

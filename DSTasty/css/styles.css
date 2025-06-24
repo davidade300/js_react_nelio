@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  color: unset;
+  text-decoration: none;
+}
+
+:root {
+  --color-red: #f03c42;
+  --bg-light-grey: #e5e5e5;
+  --text-grey: #5e5e5e;
+  --color-yellow: #fff964;
+  --color-white: #fff;
+  --text-gren: #02bb14;
+}
+
+header {
+  padding: 0, 15px;
+  background-color: var(--color-red);
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+nav h1 {
+  text-align: center;
+  color: var(--color-yellow);
+  font-size: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.pizza-card {
+  display: flex;
+  margin: 20px 0;
+}
+
+.pizza-card img {
+  border-radius: 12px 0px 0px 12px;
+}
+
+#pizzas {
+  padding: 20px 0;
+  background-color: var(--bg-light-grey);
+  padding: 20px, 15px;
+
+  /* padding: 40px 0; */
+}
+
+.pizza-card-description {
+  background-color: var(--color-white);
+  border-radius: 0, 12px, 12px, 0;
+  padding: 15px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pizza-card-description h3 {
+  color: var(--text-grey);
+  font-size: 24px;
+}
+
+.pizza-card-description p {
+  color: var(--text-grey);
+  font-size: 14px;
+}
+
+.pizza-card-description h4 {
+  color: var(--text-gren);
+  font-size: 24px;
+}
+
+#comments {
+  padding: 20px 15px;
+}
+
+#comments h2 {
+  text-align: center;
+  font-size: 32px;
+  color: var(--text-grey);
+  margin-bottom: 40px;
+}
+
+.card-comment {
+  padding: 25px 20px;
+  background-color: var(--color-yellow);
+  color: var(--color-red);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+footer {
+  padding: 0 15px;
+  height: 120px;
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content a {
+  font-size: 16px;
+}
+
+.footer-content addres {
+  font-size: 16px;
+}
