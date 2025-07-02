@@ -1,0 +1,20 @@
+console.log("Hello world!");
+const a = 10;
+const b = 10.5;
+const c = "Maria";
+const d = "a";
+const e = false;
+const f = { name: "Maria", age: 25 };
+const g = ["a", 15, false, "maria"];
+const h = null;
+const i = undefined;
+
+console.log("a -> " + typeof a);
+console.log("b -> " + typeof b);
+console.log("c -> " + typeof c);
+console.log("d -> " + typeof d);
+console.log("e -> " + typeof e);
+console.log("f -> " + typeof f);
+console.log("g -> " + typeof g);
+console.log("h -> " + typeof h);
+console.log("i -> " + typeof i);
