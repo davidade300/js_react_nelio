@@ -34,7 +34,7 @@ letras.splice(2, 3); //a partir da posicao n, delete y elementos
 console.log("TESTE SPLICE");
 console.log(letras);
 
-// CONCATENAR ARRAYS
+// CONCATENAR ARRAYSs
 
 const meninas = ["Maria", "Ana"];
 const meninos = ["João", "Marcos"];
