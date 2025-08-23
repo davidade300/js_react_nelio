@@ -14,14 +14,66 @@
     <title>Documento</title>
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="nav-container">
+      <nav class="nav-main">
         <h1>DSViaCEP</h1>
-        <div>contato</div>
+        <div class="contact-link">contato</div>
       </nav>
     </header>
     <main>
-      <section id="form-section">
+      <section id="form-section" class="form-container">
+        <div class="card-form">
+          <form name="newAddres">
+            <div class="form-control">
+              <label for="cep">CEP</label>
+              <input
+                type="text"
+                name="cep"
+                id="cep"
+                class="form-input"
+                placeholder="CEP"
+              />
+              <div class="error-message">campo requerido</div>
+            </div>
+            <div class="form-control">
+              <label for="street">Logradouro</label>
+              <input
+                type="text"
+                name="street"
+                id="street"
+                class="form-input"
+                placeholder="Logradouro"
+                disabled
+              />
+            </div>
+            <div class="form-control">
+              <label for="number">Numero</label>
+              <input
+                type="text"
+                name="number"
+                id="number"
+                class="form-input"
+                placeholder="Numero"
+              />
+              <div class="error-message">campo requerido</div>
+            </div>
+            <div class="form-control">
+              <label for="cidade">Cidade</label>
+              <input
+                type="text"
+                name="cidade"
+                id="cidade"
+                class="form-input"
+                placeholder="Cidade"
+                disabled
+              />
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-left" type="submit">Salvar</button>
+              <button class="btn btn-right" type="reset">Limpar</button>
+            </div>
+          </form>
+        </div>
         <div>
           <h3>São Paulo</h3>
           <p>Rua dos Jardins, 720</p>
