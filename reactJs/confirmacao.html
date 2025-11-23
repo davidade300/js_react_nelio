@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSCommerce</title>
 
+    <link rel="stylesheet" href="css/confirmation.css" />
     <link rel="stylesheet" href="css/cart.css" />
   </head>
   <body>
     <header>
       <nav class="dsc-container">
         <h1>DSCommerce</h1>
-        <a href="#">Entrar</a>
+        <div class="dsc-logged-user">
+          <p>Maria Silva</p>
+          <a href="#">Sair</a>
+        </div>
       </nav>
     </header>
     <main>
-      <section id="cart-container-section" class="dsc-container">
+      <section id="confirmation-section" class="dsc-container">
         <div class="dsc-card dsc-mb20">
           <div class="dsc-cart-item-container dsc-line-bottom">
             <div class="dsc-cart-item-left">
@@ -24,9 +28,7 @@
               <div class="dsc-cart-item-description">
                 <h3>Computador Gamer XT</h3>
                 <div class="dsc-cart-item-quantity-container">
-                  <div class="dsc-cart-item-quantity-btn">-</div>
                   <p>1</p>
-                  <div class="dsc-cart-item-quantity-btn">+</div>
                 </div>
               </div>
             </div>
@@ -38,9 +40,7 @@
               <div class="dsc-cart-item-description">
                 <h3>Computador Gamer XT</h3>
                 <div class="dsc-cart-item-quantity-container">
-                  <div class="dsc-cart-item-quantity-btn">-</div>
                   <p>1</p>
-                  <div class="dsc-cart-item-quantity-btn">+</div>
                 </div>
               </div>
             </div>
@@ -50,9 +50,11 @@
             <h3>R$ 15000,00</h3>
           </div>
         </div>
+        <div class="dsc-confirmation-message dsc-mb20">
+          Pedido realizado! Numero 35.
+        </div>
         <div class="dsc-btn-page-container">
-          <div class="dsc-btn dsc-btn-blue mb20">Finalizar pedido</div>
-          <div class="dsc-btn dsc-btn-white">Continuar comprando</div>
+          <div class="dsc-btn dsc-btn-white">Inicio</div>
         </div>
       </section>
     </main>
