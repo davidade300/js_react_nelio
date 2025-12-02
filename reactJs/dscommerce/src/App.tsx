@@ -1,12 +1,10 @@
 // import { useState } from "react";
-import "./App.css";
+import Catalog from "./routes/Catalog";
+// import ProductDetails from "./routes/ProductDetails";
 
-function App() {
-  return (
-    // <>
-    <h1>dscommerce</h1>
-    // </>
-  );
+export default function App() {
+  // return <ProductDetails />;
+  return <Catalog/>
 }
 
-export default App;
+// export default App;
