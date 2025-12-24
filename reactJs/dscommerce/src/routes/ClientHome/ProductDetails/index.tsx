@@ -2,27 +2,38 @@ import { Link, useParams } from "react-router-dom";
 import ButtonInverse from "../../../components/ButtonInverse";
 import ButtonPrimary from "../../../components/ButtonPrimary";
 import ProductDetailsCard from "../../../components/ProductDetailsCard";
-import * as productService from "../../../services/product-service";
 import "./styles.css";
+import { useEffect, useState } from "react";
+import type { ProductDTO } from "../../../models/product";
+import axios from "axios";
 
 export default function ProductDetails() {
-  const params = useParams();
+    const params = useParams();
 
-  const product = productService.findById(Number(params.productId));
+    const [product, setProduct] = useState<ProductDTO>();
 
-  return (
-    <main>
-      <section id="product-details-section" className="dsc-container">
-        {product && <ProductDetailsCard product={product} />}
-        <div className="dsc-btn-page-container">
-          {/* <Link to={}> */}
-          <ButtonPrimary text="Comprar" />
-          {/* </Link> */}
-          <Link to={"/"}>
-            <ButtonInverse text="Inicio" />
-          </Link>
-        </div>
-      </section>
-    </main>
-  );
+    useEffect(() => {
+        axios
+            .get(`http://localhost:8080/products/${params.productId}`)
+            .then((response) => {
+                console.log(response.data);
+                setProduct(response.data);
+            });
+    }, []);
+
+    return (
+        <main>
+            <section id="product-details-section" className="dsc-container">
+                {product && <ProductDetailsCard product={product} />}
+                <div className="dsc-btn-page-container">
+                    {/* <Link to={}> */}
+                    <ButtonPrimary text="Comprar" />
+                    {/* </Link> */}
+                    <Link to={"/"}>
+                        <ButtonInverse text="Inicio" />
+                    </Link>
+                </div>
+            </section>
+        </main>
+    );
 }
