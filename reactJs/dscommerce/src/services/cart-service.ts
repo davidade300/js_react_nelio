@@ -1,6 +1,6 @@
-import { OrderItemDTO, type OrderDTO } from "../models/order";
+import {OrderItemDTO, type OrderDTO} from "../models/order";
 import * as cartRepository from "../localstorage/cart-repository";
-import type { ProductDTO } from "../models/product";
+import type {ProductDTO} from "../models/product";
 
 export function saveCart(cart: OrderDTO) {
     cartRepository.save(cart);
@@ -27,3 +27,6 @@ export function addProduct(product: ProductDTO) {
     }
 }
 
+export function clearCart() {
+    cartRepository.clear();
+}

@@ -1,6 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { OrderDTO, OrderItemDTO } from "../models/order";
-import { CART_KEY } from "../utils/system";
+import {OrderDTO, OrderItemDTO} from "../models/order";
+import {CART_KEY} from "../utils/system";
 
 export function save(cart: OrderDTO) {
     const str = JSON.stringify(cart);
@@ -18,4 +17,9 @@ export function get(): OrderDTO {
 
     console.log(cart);
     return cart;
+}
+
+export function clear() {
+    localStorage.setItem(CART_KEY, '{"items":[]}');
+
 }

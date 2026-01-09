@@ -1,12 +1,17 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import "./styles.css";
 import * as cartService from "../../../services/cart-service";
-import { OrderDTO } from "../../../models/order";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import {OrderDTO} from "../../../models/order";
+import {useState} from "react";
+import {Link} from "react-router-dom";
 
 export default function Cart() {
     const [cart, setCart] = useState<OrderDTO>(cartService.getCart());
+
+    function handleClearClick() {
+        cartService.clearCart();
+        setCart(cartService.getCart());
+    }
 
     return (
         <main>
@@ -25,7 +30,7 @@ export default function Cart() {
                                 className="dsc-cart-item-container dsc-line-bottom"
                             >
                                 <div className="dsc-cart-item-left">
-                                    <img src={item.imgUrl} alt={item.name} />
+                                    <img src={item.imgUrl} alt={item.name}/>
                                     <div className="dsc-cart-item-description">
                                         <h3>{item.name}</h3>
                                         <div className="dsc-cart-item-quantity-container">
@@ -57,6 +62,11 @@ export default function Cart() {
                             Continuar comprando
                         </div>
                     </Link>
+
+                    <div onClick={handleClearClick} className="dsc-btn dsc-btn-white">
+                        Limpar carrinho
+                    </div>
+
                 </div>
             </section>
         </main>
